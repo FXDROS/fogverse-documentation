@@ -1,15 +1,15 @@
 export const NAVIGATION = [
     {
         "name" : "QUICK START",
-        "path" : ""
+        "path" : "/quickstart"
     },
     {
         "name" : "DOCUMENTATION",
-        "path" : ""
+        "path" : "/documentation"
     },
     {
         "name" : "COMMUNITY",
-        "path" : ""
+        "path" : "/community"
     },
     {
         "name" : "GITHUB",
