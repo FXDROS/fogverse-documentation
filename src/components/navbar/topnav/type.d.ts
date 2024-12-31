@@ -1,3 +1,3 @@
 interface mobileNavigatonInterface {
-    setSideNav: () => void
+    setMobileNav: () => void
 }

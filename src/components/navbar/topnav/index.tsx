@@ -8,7 +8,7 @@ import { NAVIGATION } from "../constants";
 import { useState } from "react";
 
 const TopNav = () => {
-  const [sideNav, setSideNav] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false);
 
   return (
     <>
@@ -36,25 +36,30 @@ const TopNav = () => {
       </div>
       <div className="w-full justify-between items-center pb-6 flex md:hidden">
         <div />
-        <Image
-          src="/assets/fogverse.png"
-          height={500}
-          width={96}
-          alt="FogVerse Icon"
-        />
+        <a href="/">
+          <Image
+            src="/assets/fogverse.png"
+            height={500}
+            width={96}
+            alt="FogVerse Icon"
+            priority
+          />
+        </a>
         <div
           className="hover:cursor-pointer"
-          onClick={() => setSideNav(!sideNav)}
+          onClick={() => setMobileNav(!mobileNav)}
         >
           <GiHamburgerMenu size={28} />
         </div>
       </div>
-      {sideNav && <TopNavMobile setSideNav={() => setSideNav(!sideNav)} />}
+      {mobileNav && (
+        <TopNavMobile setMobileNav={() => setMobileNav(!mobileNav)} />
+      )}
     </>
   );
 };
 
-const TopNavMobile: React.FC<mobileNavigatonInterface> = ({ setSideNav }) => {
+const TopNavMobile: React.FC<mobileNavigatonInterface> = ({ setMobileNav }) => {
   return (
     <div className="flex justify-between md:none h-screen w-full fixed z-10 top-0 bg-background mx-[-48px] px-12 py-6">
       <div />
@@ -69,7 +74,7 @@ const TopNavMobile: React.FC<mobileNavigatonInterface> = ({ setSideNav }) => {
           </a>
         ))}
       </div>
-      <div onClick={() => setSideNav()} className="hover:cursor-pointer">
+      <div onClick={() => setMobileNav()} className="hover:cursor-pointer">
         <IoCloseSharp size={24} />
       </div>
     </div>
