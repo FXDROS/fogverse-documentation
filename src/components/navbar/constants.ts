@@ -13,6 +13,6 @@ export const NAVIGATION = [
     },
     {
         "name" : "GITHUB",
-        "path" : ""
+        "path" : "https://github.com/FXDROS/fogverse"
     }
 ]
