@@ -1,0 +1,3 @@
+interface mobileNavigatonInterface {
+    setSideNav: () => void
+}
