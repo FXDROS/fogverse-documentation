@@ -6,10 +6,10 @@ const DocumentationLayout: React.FC<documentationLayoutInterface> = ({
 }) => {
   return (
     <div className="flex justify-center mt-12">
-      <div className="w-1/4">
+      <div className="w-64">
         <SubNav contentList={contentList} />
       </div>
-      <div className="w-1/2">{children}</div>
+      <div className="w-1/2 overflow-scroll">{children}</div>
     </div>
   );
 };
