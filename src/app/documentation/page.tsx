@@ -1,5 +1,7 @@
+import DocumentationPage from "@/components/pages/documentation";
+
 const Documentation = () => {
-  return <div></div>;
+  return <DocumentationPage />;
 };
 
 export default Documentation;
