@@ -6,7 +6,7 @@ const SubNav: React.FC<subNavInterface> = ({ contentList }) => {
   const [selectedSub, setSelectedSub] = useState("");
 
   return (
-    <div className="text-base w-1/4">
+    <div className="text-base w-fit">
       {contentList?.map((content, index) => (
         <div key={index} className="mb-4">
           <a className="font-bold" href={content.path}>
@@ -14,6 +14,7 @@ const SubNav: React.FC<subNavInterface> = ({ contentList }) => {
           </a>
           {content.content.map((subContent, subIndex) => (
             <a
+              className="w-fit"
               href={subContent.path}
               onClick={() => setSelectedSub(subContent.title)}
             >
