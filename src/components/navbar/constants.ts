@@ -19,8 +19,8 @@ export const NAVIGATION = [
 
 export const DOCUMENTATION = [
   {
-    topic: "Getting started",
-    path: "#getting-started",
+    topic: "Get started",
+    path: "#get-started",
     content: [
       {
         title: "Introduction",
