@@ -14,6 +14,7 @@ export default {
         primaryblue: "var(--primaryblue)",
         primaryred: "var(--primaryred)",
         gray: "var(--gray)",
+        "gray-800": "var(--gray-800)",
       },
       fontSize: {
         xs: [".75rem", "1.125"], // 12px
