@@ -1,5 +1,7 @@
 import DocumentationLayout from "@/components/commons/documentation-layout";
 import { DOCUMENTATION } from "@/components/navbar/constants";
+import { TerminalSnippet, CodeSnippet } from "@/components/commons/snippets";
+import SampleProducer from "./introduction/sample-producer/sample-producer";
 
 const DocumentationPage = () => {
   return (
@@ -15,29 +17,129 @@ const DocumentationPage = () => {
           Introduction
         </div>
         <div className="text-lg font-semibold my-4">What is FogVerse?</div>
-        <div className="text-base">Fogverse...</div>
-        <div className="text-lg font-semibold my-4">Why Apache Kafka?</div>
-        <div className="text-base">Reason for using apache kafka</div>
+        <div className="text-base">
+          FogVerse is a Kafka-based Python library designed to manage the data
+          flow of a stream application. FogVerse has three primary utilizable
+          components: Producer, Consumer, and ConsumerStorage. The Producer
+          component has the role of producing and publishing messages to a Kafka
+          server. On the other hand, the Consumer component is responsible for
+          consuming messages from a Kafka server, while the ConsumerStorage
+          component stores consumed messages. To utilize FogVerse, a Kafka
+          server must be run beforehand. The current version of FogVerse runs at
+          the very least on <b>Python3.9</b>, but if you have a lower version of
+          Python, you can check the previous versions.
+        </div>
+        <div className="text-lg font-semibold my-4">Why Kafka?</div>
+        <div className="text-base">
+          Based on Apache Kafka's official documentation, Apache Kafka is an
+          open-source distributed event streaming platform used by thousands of
+          companies for high-performance data pipelines, streaming analytics,
+          data integration, and mission-critical applications. Apache Kafka
+          provides high throughput and scalability, making it one of the most
+          suitable tools for stream applications. To know more about Apache
+          Kafka, check out its&nbsp;
+          <a
+            href="https://kafka.apache.org/"
+            className="text-primaryblue underline"
+          >
+            official documentation
+          </a>
+          .
+        </div>
       </div>
       <div className="mt-12">
-        <div id="introduction" className="text-very-lg font-bold my-4">
+        <div id="installation" className="text-very-lg font-bold my-4">
           Installation
         </div>
         <div className="text-lg font-semibold my-4">Using pip</div>
-        <div className="text-base">Installation using pip</div>
+        <div className="text-base">
+          There are various ways to install FogVerse to your project. The first
+          way is the installation by pip. You can copy and run the below command
+          in your terminal (or any other command line interface application).
+          Using a virtual environment is highly recommended.
+          <TerminalSnippet>
+            <span>
+              <span>pip install&nbsp;</span>
+              <span className="text-yellow-500">
+                git+https://github.com/FXDROS/fogverse.git@main
+              </span>
+            </span>
+          </TerminalSnippet>
+        </div>
         <div className="text-lg font-semibold my-4">
           Download directly from GitHub
         </div>
-        <div className="text-base">Github download</div>
+        <div className="text-base">
+          Go to the&nbsp;
+          <a
+            href="https://github.com/FXDROS/fogverse"
+            className="text-primaryblue underline"
+          >
+            FogVerse GitHub repository
+          </a>
+          &nbsp;and clone the project to your device. Once the clone has been
+          completed, install the library using pip by running the following
+          command in the terminal. Make sure that the command is executed in the
+          directory where the FogVerse library is saved (or you can navigate it
+          by yourself while executing the command).
+          <TerminalSnippet>
+            <span>
+              <span>pip install&nbsp;</span>
+              <span className="text-yellow-500">fogverse/</span>
+            </span>
+          </TerminalSnippet>
+        </div>
       </div>
       <div className="mt-12">
-        <div id="introduction" className="text-very-lg font-bold my-4">
+        <div id="quickstart" className="text-very-lg font-bold my-4">
           FogVerse quickstart
         </div>
         <div className="text-lg font-semibold my-4">Running Kafka</div>
-        <div className="text-base">To use FogVerse, you will need kafka</div>
+        <div className="text-base">
+          Since FogVerse is a Kafka-based library, a Kafka server is necessary.
+          There are some Kafka server options, such as Apache Kafka and
+          Confluent. For starters, we will utilize a local Apache Kafka server.
+          To do so, first, we need to download Apache Kafka from&nbsp;
+          <a
+            href="https://kafka.apache.org/downloads"
+            className="text-primaryblue underline"
+          >
+            Apache Kafka's official documentation
+          </a>
+          . You can download the source download file, unzip it, and run it with
+          zookeeper as mentioned in&nbsp;
+          <a
+            href="https://kafka.apache.org/quickstart"
+            className="text-primaryblue underline"
+          >
+            Apache Kafka's quickstart
+          </a>
+          .
+          <br />
+          <br />
+          First, run the zookeeper server by executing this command.
+          <TerminalSnippet>
+            <span>
+              bin/zookeeper-server-start.sh config/zookeeper.properties
+            </span>
+          </TerminalSnippet>
+          <br />
+          <br />
+          Next, run the Kafka server after the zookeeper server is fully
+          running. If you want to customize the Kafka server configurations, you
+          can do it through the&nbsp;
+          <code className="bg-gray p-1 rounded text-sm">server.properties</code>
+          &nbsp;file.
+          <TerminalSnippet>
+            <span>bin/kafka-server-start.sh config/server.properties</span>
+          </TerminalSnippet>
+        </div>
         <div className="text-lg font-semibold my-4">Create simple producer</div>
-        <div className="text-base">Creating simple producer...</div>
+        <div className="text-base">
+          To create a simple producer component, you need to extend the Producer
+          class. Let's start by creating a simple producer that generates random
+          numbers.
+        </div>
         <div className="text-lg font-semibold my-4">Create simple consumer</div>
         <div className="text-base">Creating simple consumer...</div>
         <div className="text-lg font-semibold my-4">
