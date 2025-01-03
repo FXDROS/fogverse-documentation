@@ -13,16 +13,17 @@ export default {
         foreground: "var(--foreground)",
         primaryblue: "var(--primaryblue)",
         primaryred: "var(--primaryred)",
+        gray: "var(--gray)",
       },
       fontSize: {
-        xs: ".75rem", // 12px
-        sm: [".875rem", "1.25rem"], // 14px
-        base: ["1.125rem", "1.5rem"], // 18px
-        lg: ["1.25rem", "1.75rem"], // 20px
-        "very-lg": ["1.5rem", "2rem"], // 24px
-        "semi-xl": ["2rem", "2.5rem"], // 32px
-        xl: ["3rem", "3.5rem"], //48px
-        xxl: ["4rem", "4.5rem"], // 64px
+        xs: [".75rem", "1.125"], // 12px
+        sm: [".875rem", "1.3125rem"], // 14px
+        base: ["1rem", "1.5rem"], // 18px
+        lg: ["1.25rem", "1.875rem"], // 20px
+        "very-lg": ["1.5rem", "2.25rem"], // 24px
+        "semi-xl": ["2rem", "3rem"], // 32px
+        xl: ["3rem", "4.5rem"], //48px
+        xxl: ["4rem", "6rem"], // 64px
       },
     },
   },
