@@ -5,11 +5,11 @@ const DocumentationLayout: React.FC<documentationLayoutInterface> = ({
   children,
 }) => {
   return (
-    <div className="flex justify-center mt-12">
+    <div className="flex justify-center mt-44">
       <div className="w-64">
         <SubNav contentList={contentList} />
       </div>
-      <div className="w-1/2 overflow-scroll">{children}</div>
+      <div className="w-[640px] overflow-scroll">{children}</div>
     </div>
   );
 };

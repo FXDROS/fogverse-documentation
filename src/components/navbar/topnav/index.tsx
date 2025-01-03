@@ -12,8 +12,8 @@ const TopNav = () => {
 
   return (
     <>
-      <div className="w-full justify-between items-center pb-6 hidden md:flex">
-        <a href="/">
+      <div className="fixed w-full justify-between items-center py-8 hidden md:flex shadow-lg bg-background top-0">
+        <a href="/" className="mx-12">
           <Image
             src="/assets/fogverse.png"
             height={500}
@@ -22,7 +22,7 @@ const TopNav = () => {
             priority
           />
         </a>
-        <div className="flex justify-end items-center">
+        <div className="flex justify-end items-center mx-12">
           {NAVIGATION?.map((nav, index) => (
             <a
               key={index}

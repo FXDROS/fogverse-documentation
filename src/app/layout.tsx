@@ -26,10 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased px-12 py-6`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TopNav />
-        {children}
+        <div className="px-12">{children}</div>
+        <footer className="py-4 text-sm text-center bg-gray mt-12">
+          Developed with &#129504; by CSL
+        </footer>
       </body>
     </html>
   );
