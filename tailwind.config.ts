@@ -15,6 +15,8 @@ export default {
         primaryred: "var(--primaryred)",
         gray: "var(--gray)",
         "gray-800": "var(--gray-800)",
+        "slate-400": "var(--slate-400)",
+        "slate-500": "var(--slate-500)",
       },
       fontSize: {
         xs: [".75rem", "1.125"], // 12px
