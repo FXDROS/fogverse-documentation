@@ -12,7 +12,7 @@ const TopNav = () => {
 
   return (
     <>
-      <div className="fixed w-full justify-between items-center py-8 hidden md:flex shadow-lg bg-background top-0">
+      <div className="fixed w-full justify-between items-center py-8 hidden md:flex shadow-lg bg-background top-0 z-10">
         <a href="/" className="mx-12">
           <Image
             src="/assets/fogverse.png"
