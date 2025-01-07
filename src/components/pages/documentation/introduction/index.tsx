@@ -31,9 +31,9 @@ const Introduction = () => {
         </div>
         <div className="text-lg font-semibold my-4">Why Kafka?</div>
         <div className="text-base">
-          Based on Apache Kafka's official documentation, Apache Kafka is an
-          open-source distributed event streaming platform used by thousands of
-          companies for high-performance data pipelines, streaming analytics,
+          Based on Apache Kafka&apos;s official documentation, Apache Kafka is
+          an open-source distributed event streaming platform used by thousands
+          of companies for high-performance data pipelines, streaming analytics,
           data integration, and mission-critical applications. Apache Kafka
           provides high throughput and scalability, making it one of the most
           suitable tools for stream applications. To know more about Apache
@@ -92,7 +92,7 @@ const Introduction = () => {
             href="https://kafka.apache.org/downloads"
             className="text-primaryblue underline"
           >
-            Apache Kafka's official documentation
+            Apache Kafka&apos;s official documentation
           </a>
           . You can download the source download file, unzip it, and run it with
           zookeeper as mentioned in&nbsp;
@@ -100,7 +100,7 @@ const Introduction = () => {
             href="https://kafka.apache.org/quickstart"
             className="text-primaryblue underline"
           >
-            Apache Kafka's quickstart
+            Apache Kafka&apos;s quickstart
           </a>
           .
           <br />

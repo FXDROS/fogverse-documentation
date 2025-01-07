@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu";
 import { IoCloseSharp } from "react-icons/io5";
 import { NAVIGATION } from "../constants";
 import { useState } from "react";
+import Link from "next/link";
 
 const TopNav = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -13,7 +14,7 @@ const TopNav = () => {
   return (
     <>
       <div className="fixed w-full justify-between items-center py-8 hidden md:flex shadow-lg bg-background top-0 z-10">
-        <a href="/" className="mx-12">
+        <Link href="/" className="mx-12">
           <Image
             src="/assets/fogverse.png"
             height={500}
@@ -21,7 +22,7 @@ const TopNav = () => {
             alt="FogVerse Icon"
             priority
           />
-        </a>
+        </Link>
         <div className="flex justify-end items-center mx-12">
           {NAVIGATION?.map((nav, index) => (
             <a
@@ -36,7 +37,7 @@ const TopNav = () => {
       </div>
       <div className="w-full justify-between items-center pb-6 flex md:hidden">
         <div />
-        <a href="/">
+        <Link href="/">
           <Image
             src="/assets/fogverse.png"
             height={500}
@@ -44,7 +45,7 @@ const TopNav = () => {
             alt="FogVerse Icon"
             priority
           />
-        </a>
+        </Link>
         <div
           className="hover:cursor-pointer"
           onClick={() => setMobileNav(!mobileNav)}

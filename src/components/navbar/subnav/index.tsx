@@ -18,6 +18,7 @@ const SubNav: React.FC<subNavInterface> = ({ contentList }) => {
           </a>
           {content.content.map((subContent, subIndex) => (
             <a
+              key={subIndex}
               className="w-fit"
               href={subContent.path}
               onClick={() => setSelectedSub(subContent.title)}

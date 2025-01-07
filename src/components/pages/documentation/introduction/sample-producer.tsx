@@ -6,7 +6,8 @@ const SampleProducer = () => {
     <div className="text-base">
       <div>
         To create a simple producer component, you need to extend the Producer
-        class. Let's start by creating a simple <SmallCode code="producer.py" />
+        class. Let&apos;s start by creating a simple
+        <SmallCode code="producer.py" />
         that generates random numbers. First, we need to initialize the
         Producer.
         <CodeSnippet code={SAMPLE_PRODUCER.initialization} language="python" />

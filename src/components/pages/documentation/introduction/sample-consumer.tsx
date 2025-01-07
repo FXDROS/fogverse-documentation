@@ -6,7 +6,7 @@ const SampleConsumer = () => {
     <div className="text-base">
       <div>
         To consume messages from a producer, we can create a consumer component
-        by extending the <SmallCode code="Consumer()" /> class. Let's try
+        by extending the <SmallCode code="Consumer()" /> class. Let&apos;s try
         consuming messages sent by the random number producer that we have
         created. First, we need to initialize the Consumer.
         <CodeSnippet code={SAMPLE_CONSUMER.initialization} language="python" />
@@ -15,7 +15,7 @@ const SampleConsumer = () => {
         Contrary to a producer, a consumer is expected to consume the data or
         messages and send them after being processed. Hence, we need to
         overwrite the <SmallCode code="_send()" /> function and we can process
-        our data there. Note that the <SmallCode code="run_in_executor()" />{" "}
+        our data there. Note that the <SmallCode code="run_in_executor()" />
         function accepts three parameters: <SmallCode code="executor" />,
         <SmallCode code="func" />, and <SmallCode code="*args" />.
         <CodeSnippet code={SAMPLE_CONSUMER.send} language="python" />
