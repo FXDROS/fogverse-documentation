@@ -17,8 +17,8 @@ const TopNav = () => {
         <Link href="/" className="mx-12">
           <Image
             src="/assets/fogverse.png"
-            height={500}
-            width={128}
+            height={128}
+            width={42.5}
             alt="FogVerse Icon"
             priority
           />
