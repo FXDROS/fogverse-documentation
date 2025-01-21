@@ -9,7 +9,7 @@ const DocumentationLayout: React.FC<documentationLayoutInterface> = ({
       <div className="w-64">
         <SubNav contentList={contentList} />
       </div>
-      <div className="w-[640px] overflow-scroll">{children}</div>
+      <div className="w-[640px]">{children}</div>
     </div>
   );
 };
