@@ -1,6 +1,5 @@
 import { SmallCode } from "@/components/commons/code-snippet";
 import UnorderedList from "@/components/commons/unordered-list";
-import { FaCircle } from "react-icons/fa";
 
 const Producer = () => {
   return (
