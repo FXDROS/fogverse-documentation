@@ -58,7 +58,7 @@ export const SmallCode: React.FC<snippetInterface> = ({ code }) => {
   return (
     <>
       &nbsp;
-      <code className="bg-gray p-1 rounded text-sm">{code}</code>&nbsp;
+      <code className="bg-gray px-1 py-0.5 rounded text-sm">{code}</code>&nbsp;
     </>
   );
 };
