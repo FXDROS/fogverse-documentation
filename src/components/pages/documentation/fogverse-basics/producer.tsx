@@ -11,9 +11,7 @@ const Producer = () => {
       <div className="text-base">
         To send messages to a Kafka topic, a component has to extend the
         <SmallCode code="Producer()" />
-        class. Basically, The
-        <SmallCode code="Producer()" />
-        is just an empty class that extends the
+        class, which basically, is just an empty class that extends the
         <SmallCode code="AbstractConsumer()" />
         class and the
         <SmallCode code="AIOKafkaProducer()" />
@@ -23,7 +21,8 @@ const Producer = () => {
         Hence, as mentioned before, a component is expected to behave as a
         producer and consumer. The
         <SmallCode code="Producer()" />
-        class has several attributes:
+        class has several attributes that you can declare during the class
+        initialization.
         <div className="ml-4 mt-4">
           <UnorderedList>
             <SmallCode code="producer_topic: str[]" />
