@@ -118,8 +118,8 @@ class MyConsumer(Consumer):
 		return await self._loop.run_in_executor(None, __send, data)
 
 async def main():
-	producer = MyConsumer()
-	tasks = [producer.run()]
+	consumer = MyConsumer()
+	tasks = [consumer.run()]
 
 	try:
 		await asyncio.gather(*tasks)
