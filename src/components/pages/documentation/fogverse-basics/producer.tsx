@@ -1,5 +1,6 @@
-import { SmallCode } from "@/components/commons/code-snippet";
+import CodeSnippet, { SmallCode } from "@/components/commons/code-snippet";
 import UnorderedList from "@/components/commons/unordered-list";
+import { PRODUCER } from "./constants";
 
 const Producer = () => {
   return (
@@ -22,7 +23,8 @@ const Producer = () => {
         <SmallCode code="Producer()" />
         class has several attributes that you can declare during the class
         initialization.
-        <div className="ml-4 mt-4">
+        <CodeSnippet language="python" code={PRODUCER.initialization} />
+        <div className="mt-4">
           <UnorderedList>
             <SmallCode code="producer_topic: str[]" />
             to declare which topics your messages would be sent. This attribute
