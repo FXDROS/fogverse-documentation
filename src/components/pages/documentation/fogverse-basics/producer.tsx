@@ -1,6 +1,12 @@
 import CodeSnippet, { SmallCode } from "@/components/commons/code-snippet";
 import UnorderedList from "@/components/commons/unordered-list";
 import { PRODUCER } from "./constants";
+import {
+  AsyncFunction,
+  EmptyFunction,
+  Required,
+  RequireImplementation,
+} from "@/components/commons/tags";
 
 const Producer = () => {
   return (
@@ -8,23 +14,28 @@ const Producer = () => {
       <div id="producer" className="text-very-lg font-bold my-4">
         Producer
       </div>
+      <div className="text-lg font-semibold my-4">
+        Producer's base attributes
+      </div>
       <div className="text-base">
         To send messages to a Kafka topic, a component has to extend the
         <SmallCode code="Producer()" />
         class, which basically, is just an empty class that extends the
         <SmallCode code="AbstractConsumer()" />
-        class and the
+        class, the
         <SmallCode code="AIOKafkaProducer()" />
+        class, and the
+        <SmallCode code="Runnable()" />
         class. You might wonder why a producer component should extend a
         consumer class even though it is designed to create a producer
         component. FogVerse is designed with data stream management in mind.
         Hence, as mentioned before, a component is expected to behave as a
-        producer and consumer. The
+        producer and consumer. When initializing a
         <SmallCode code="Producer()" />
-        class has several attributes that you can declare during the class
-        initialization.
+        class, there are several attributes that you can declare, and some of
+        them are required.
         <CodeSnippet language="python" code={PRODUCER.initialization} />
-        <div className="mt-4">
+        <div className="mt-4 ml-4">
           <UnorderedList>
             <SmallCode code="producer_topic: str[]" />
             to declare which topics your messages would be sent. This attribute
@@ -32,6 +43,7 @@ const Producer = () => {
             this attribute through environment variable with
             <SmallCode code="PRODUCER_TOPIC" />
             as the key.
+            <Required />
           </UnorderedList>
           <UnorderedList>
             <SmallCode code="producer_servers: str[]" />
@@ -40,6 +52,7 @@ const Producer = () => {
             value of this attribute through environment variable with
             <SmallCode code="PRODUCER_SERVERS" />
             as the key.
+            <Required />
           </UnorderedList>
           <UnorderedList>
             <SmallCode code="auto_decode: bool" />
@@ -56,6 +69,47 @@ const Producer = () => {
             <SmallCode code="jpg" />
             and
             <SmallCode code="png" />.
+          </UnorderedList>
+        </div>
+        <div className="text-lg font-semibold my-4">
+          Producer's built-in functions
+        </div>
+        The
+        <SmallCode code="Producer()" />
+        class has some built in functions. Please be aware when you are going to
+        override it and ended up breaking up your program, since it might be not
+        an empty function. The functions mentioned in this section are just some
+        essentials function. Please check further in this documentation or
+        through the source code for more information.
+        <div className="mt-4 ml-4">
+          <UnorderedList>
+            <SmallCode code="start_producer(self)" />
+            to configure and start a producer as well as setting up the log
+            system for a producer component.
+            <AsyncFunction />
+          </UnorderedList>
+          <UnorderedList>
+            <SmallCode
+              code="_send(self, data, *args, topic=None, headers=None, key=None,
+                    **kwargs)"
+            />
+            to send messages to a kafka server.
+            <AsyncFunction />
+          </UnorderedList>
+          <UnorderedList>
+            <SmallCode code="close_producer(self)" />
+            to stop a runnning producer component.
+            <AsyncFunction />
+          </UnorderedList>
+          <UnorderedList>
+            <SmallCode code="receive(self)" />
+            to do something when data is received. When your producer and
+            consumer component is the same class, you do not really need to
+            implement this function, since the consumer component has already
+            implemented it.
+            <AsyncFunction />
+            <EmptyFunction />
+            <RequireImplementation />
           </UnorderedList>
         </div>
       </div>
