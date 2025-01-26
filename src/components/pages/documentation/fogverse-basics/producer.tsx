@@ -15,7 +15,7 @@ const Producer = () => {
         Producer
       </div>
       <div className="text-lg font-semibold my-4">
-        Producer's base attributes
+        Producer&apos;s base attributes
       </div>
       <div className="text-base">
         To send messages to a Kafka topic, a component has to extend the
@@ -72,7 +72,7 @@ const Producer = () => {
           </UnorderedList>
         </div>
         <div className="text-lg font-semibold my-4">
-          Producer's built-in functions
+          Producer&apos;s built-in functions
         </div>
         The
         <SmallCode code="Producer()" />
