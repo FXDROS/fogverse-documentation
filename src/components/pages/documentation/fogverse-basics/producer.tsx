@@ -14,23 +14,23 @@ const Producer = () => {
       <div id="producer" className="text-very-lg font-bold my-4">
         Producer
       </div>
+      To send messages to a Kafka topic, a component has to extend the
+      <SmallCode code="Producer()" />
+      class, which basically, is just an empty class that extends the
+      <SmallCode code="AbstractConsumer()" />
+      class, the
+      <SmallCode code="AIOKafkaProducer()" />
+      class, and the
+      <SmallCode code="Runnable()" />
+      class. You might wonder why a producer component should extend a consumer
+      class even though it is designed to create a producer component. FogVerse
+      is designed with data stream management in mind. Hence, as mentioned
+      before, a component is expected to behave as a producer and consumer.
       <div className="text-lg font-semibold my-4">
         Producer&apos;s base attributes
       </div>
       <div className="text-base">
-        To send messages to a Kafka topic, a component has to extend the
-        <SmallCode code="Producer()" />
-        class, which basically, is just an empty class that extends the
-        <SmallCode code="AbstractConsumer()" />
-        class, the
-        <SmallCode code="AIOKafkaProducer()" />
-        class, and the
-        <SmallCode code="Runnable()" />
-        class. You might wonder why a producer component should extend a
-        consumer class even though it is designed to create a producer
-        component. FogVerse is designed with data stream management in mind.
-        Hence, as mentioned before, a component is expected to behave as a
-        producer and consumer. When initializing a
+        When initializing a
         <SmallCode code="Producer()" />
         class, there are several attributes that you can declare, and some of
         them are required.
@@ -80,7 +80,8 @@ const Producer = () => {
         override it and ended up breaking up your program, since it might be not
         an empty function. The functions mentioned in this section are just some
         essentials function. Please check further for the inherited
-        classes&apos; documentations.
+        classes&apos;, since you might inadvertently overridding existing class.
+        <CodeSnippet language="python" code={PRODUCER.base_functions} />
         <div className="mt-4 ml-4">
           <UnorderedList>
             <SmallCode code="start_producer(self)" />
@@ -90,8 +91,8 @@ const Producer = () => {
           </UnorderedList>
           <UnorderedList>
             <SmallCode
-              code="_send(self, data, *args, topic=None, headers=None, key=None,
-                    **kwargs)"
+              code="send(self, data, topic=None, key=None, headers=None,
+                   callback=None)"
             />
             to send messages to a kafka server.
             <AsyncFunction />
