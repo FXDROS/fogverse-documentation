@@ -40,21 +40,19 @@ export const CONSUMER = {
             encode_encoding = ''                # encoding type (jpg, png, etc.)
             Consumer.__init__(self)`,
 
-  base_functions: `    async def start_producer(self):
+  base_functions: `    async def start_consumer(self):
             # TODO: Implement code if needed
-            await super().start_producer()
-
-        async def send(self, data, topic=None, key=None, headers=None,
-                        callback=None):
-            # TODO: Implement code if needed
-            await super().send(data, topic=topic, key=key,
-                                headers=headers, callback=callback)
-
-        async def close_producer(self):
-            # TODO: Implement code if needed
-            await super().close_producer()
+            await super().start_consumer()
 
         async def receive(self):
+            # TODO: Implement code if needed
+            await super().receive()
+
+        async def close_consumer(self):
+            # TODO: Implement code if needed
+            await super().close_consumer()
+
+        async def _send(self, data, *args, **kwargs):
             # TODO: Implement code`,
 };
 
