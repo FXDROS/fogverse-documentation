@@ -79,8 +79,8 @@ const Producer = () => {
         class has some built in functions. Please be aware when you are going to
         override it and ended up breaking up your program, since it might be not
         an empty function. The functions mentioned in this section are just some
-        essentials function. Please check further in this documentation or
-        through the source code for more information.
+        essentials function. Please check further for the inherited
+        classes&apos; documentations.
         <div className="mt-4 ml-4">
           <UnorderedList>
             <SmallCode code="start_producer(self)" />
