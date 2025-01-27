@@ -75,9 +75,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 class MyConsumer(Consumer):
-  def __init__(self, loop=None):
-    self.consumer_topic = 'input'
-    Consumer.__init__(self)`,
+	def __init__(self, loop=None):
+    	self.consumer_topic = 'input'
+    	Consumer.__init__(self)`,
 
   send: `	async def _send(self, data, *args, **kwargs):
 		def __send(data):
