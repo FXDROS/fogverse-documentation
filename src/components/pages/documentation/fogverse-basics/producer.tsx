@@ -26,10 +26,10 @@ const Producer = () => {
       class even though it is designed to create a producer component. FogVerse
       is designed with data stream management in mind. Hence, as mentioned
       before, a component is expected to behave as a producer and consumer.
-      <div className="text-lg font-semibold my-4">
-        Producer&apos;s base attributes
-      </div>
-      <div className="text-base">
+      <div>
+        <div className="text-lg font-semibold my-4">
+          Producer&apos;s base attributes
+        </div>
         When initializing a
         <SmallCode code="Producer()" />
         class, there are several attributes that you can declare, and some of
@@ -71,6 +71,8 @@ const Producer = () => {
             <SmallCode code="png" />.
           </UnorderedList>
         </div>
+      </div>
+      <div>
         <div className="text-lg font-semibold my-4">
           Producer&apos;s built-in functions
         </div>
@@ -94,7 +96,7 @@ const Producer = () => {
               code="send(self, data, topic=None, key=None, headers=None,
                    callback=None)"
             />
-            to send messages to a kafka server.
+            to send messages to a Kafka server.
             <AsyncFunction />
           </UnorderedList>
           <UnorderedList>
