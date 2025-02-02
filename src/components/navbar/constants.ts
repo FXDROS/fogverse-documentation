@@ -49,12 +49,8 @@ export const DOCUMENTATION = [
         path: "#consumer",
       },
       {
-        title: "Storage",
-        path: "#storage",
-      },
-      {
-        title: "Logging",
-        path: "#logging",
+        title: "Consumer storage",
+        path: "#consumer-storage",
       },
       {
         title: "OpenCV consumer",
@@ -66,6 +62,10 @@ export const DOCUMENTATION = [
     topic: "FogVerse advance",
     path: "#fogverse-advance",
     content: [
+      {
+        title: "Logging",
+        path: "#logging",
+      },
       {
         title: "Auto scaling",
         path: "#auto-scaling",
