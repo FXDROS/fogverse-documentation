@@ -59,7 +59,7 @@ export const CONSUMER = {
 export const CONSUMER_STORAGE = {
   initialization: `from fogverse import Consumer, ConsumerStorage
 
-    class MyConsumer(Consumer):
+    class MyConsumer(Consumer, ConsumerStorage):
         def __init__(self):
             self.consumer_topic = ['']          # message topic
             self.consumer_servers = ['']        # kafka servers
