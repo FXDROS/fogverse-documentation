@@ -1,8 +1,7 @@
 import Consumer from "./consumer";
-import Logging from "./logging";
 import OpenCV from "./opencv";
 import Producer from "./producer";
-import StorageDocumentation from "./storage";
+import ConsumerStorage from "./consumer-storage";
 
 const FogverseBasics = () => {
   return (
@@ -19,8 +18,7 @@ const FogverseBasics = () => {
       </div>
       <Producer />
       <Consumer />
-      <StorageDocumentation />
-      <Logging />
+      <ConsumerStorage />
       <OpenCV />
     </div>
   );

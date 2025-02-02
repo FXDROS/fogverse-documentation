@@ -1,7 +1,7 @@
 import CodeSnippet, { SmallCode } from "@/components/commons/code-snippet";
 import { CONSUMER_STORAGE } from "./constants";
 
-const StorageDocumentation = () => {
+const ConsumerStorage = () => {
   return (
     <div className="mt-12">
       <div id="consumer-storage" className="text-very-lg font-bold my-4">
@@ -33,4 +33,4 @@ const StorageDocumentation = () => {
   );
 };
 
-export default StorageDocumentation;
+export default ConsumerStorage;
