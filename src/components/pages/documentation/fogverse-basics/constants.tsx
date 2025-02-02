@@ -56,6 +56,20 @@ export const CONSUMER = {
             # TODO: Implement code`,
 };
 
+export const CONSUMER_STORAGE = {
+  initialization: `from fogverse import Consumer, ConsumerStorage
+
+    class MyConsumer(Consumer):
+        def __init__(self):
+            self.consumer_topic = ['']          # message topic
+            self.consumer_servers = ['']        # kafka servers
+            auto_decode = False                 # decode every received message
+            auto_encode = False                 # encode every sent message
+            encode_encoding = ''                # encoding type (jpg, png, etc.)
+            Consumer.__init__(self)
+            ConsumerStorage.__init__(self, keep_messages=False)`,
+};
+
 /*
 export const ABSTRACT_CONSUMER = {
   start_consumer: `async def start_consumer(self):
