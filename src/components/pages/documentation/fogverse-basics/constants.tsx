@@ -82,8 +82,9 @@ class MyCameraConsumer(OpenCVConsumer):
 class MyCameraConsumer(OpenCVConsumer):
     def __init__(self):
         OpenCVConsumer.__init__(self)
-        self.consumer.set(cv2.CAP_PROP_FRAME_WIDTH, SIZE[0])
-        self.consumer.set(cv2.CAP_PROP_FRAME_HEIGHT, SIZE[1])`,
+        self.consumer.set(cv2.CAP_PROP_FRAME_WIDTH, 680)
+        self.consumer.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        self.consumer.set(cv2.CAP_PROP_FPS, 5)`,
 };
 
 /*
