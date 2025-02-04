@@ -59,8 +59,8 @@ export const DOCUMENTATION = [
     ],
   },
   {
-    topic: "FogVerse advance",
-    path: "#fogverse-advance",
+    topic: "FogVerse advances",
+    path: "#fogverse-advances",
     content: [
       {
         title: "Logging",
