@@ -31,43 +31,59 @@ class MyProducer(Producer):
 export const CONSUMER = {
   initialization: `from fogverse import Consumer
 
-    class MyConsumer(Consumer):
-        def __init__(self):
-            self.consumer_topic = ['']          # message topic
-            self.consumer_servers = ['']        # kafka servers
-            auto_decode = False                 # decode every received message
-            auto_encode = False                 # encode every sent message
-            encode_encoding = ''                # encoding type (jpg, png, etc.)
-            Consumer.__init__(self)`,
+class MyConsumer(Consumer):
+    def __init__(self):
+        self.consumer_topic = ['']          # message topic
+        self.consumer_servers = ['']        # kafka servers
+        auto_decode = False                 # decode every received message
+        auto_encode = False                 # encode every sent message
+        encode_encoding = ''                # encoding type (jpg, png, etc.)
+        Consumer.__init__(self)`,
 
   base_functions: `    async def start_consumer(self):
-            # TODO: Implement code if needed
-            await super().start_consumer()
+        # TODO: Implement code if needed
+        await super().start_consumer()
 
-        async def receive(self):
-            # TODO: Implement code if needed
-            await super().receive()
+    async def receive(self):
+        # TODO: Implement code if needed
+        await super().receive()
 
-        async def close_consumer(self):
-            # TODO: Implement code if needed
-            await super().close_consumer()
+    async def close_consumer(self):
+        # TODO: Implement code if needed
+        await super().close_consumer()
 
-        async def _send(self, data, *args, **kwargs):
-            # TODO: Implement code`,
+    async def _send(self, data, *args, **kwargs):
+        # TODO: Implement code`,
 };
 
 export const CONSUMER_STORAGE = {
   initialization: `from fogverse import Consumer, ConsumerStorage
 
-    class MyConsumer(Consumer, ConsumerStorage):
-        def __init__(self):
-            self.consumer_topic = ['']          # message topic
-            self.consumer_servers = ['']        # kafka servers
-            auto_decode = False                 # decode every received message
-            auto_encode = False                 # encode every sent message
-            encode_encoding = ''                # encoding type (jpg, png, etc.)
-            Consumer.__init__(self)
-            ConsumerStorage.__init__(self, keep_messages=False)`,
+class MyConsumer(Consumer, ConsumerStorage):
+    def __init__(self):
+        self.consumer_topic = ['']          # message topic
+        self.consumer_servers = ['']        # kafka servers
+        auto_decode = False                 # decode every received message
+        auto_encode = False                 # encode every sent message
+        encode_encoding = ''                # encoding type (jpg, png, etc.)
+        Consumer.__init__(self)
+        ConsumerStorage.__init__(self, keep_messages=False)`,
+};
+
+export const OPENCV_CONSUMER = {
+  initialization: `from fogverse import OpenCVConsumer
+
+class MyCameraConsumer(OpenCVConsumer):
+    def __init__(self):
+        OpenCVConsumer.__init__(self)`,
+
+  set_properties: `from fogverse import OpenCVConsumer
+
+class MyCameraConsumer(OpenCVConsumer):
+    def __init__(self):
+        OpenCVConsumer.__init__(self)
+        self.consumer.set(cv2.CAP_PROP_FRAME_WIDTH, SIZE[0])
+        self.consumer.set(cv2.CAP_PROP_FRAME_HEIGHT, SIZE[1])`,
 };
 
 /*
