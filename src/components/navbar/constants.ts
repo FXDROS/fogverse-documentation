@@ -12,8 +12,8 @@ export const NAVIGATION = [
     path: "/community",
   },
   {
-    name: "GITHUB",
-    path: "https://github.com/FXDROS/fogverse",
+    name: "GITLAB",
+    path: "https://gitlab.cs.ui.ac.id/fogverse/fogverse",
   },
 ];
 
@@ -67,8 +67,8 @@ export const DOCUMENTATION = [
     path: "#fogverse-advances",
     content: [
       {
-        title: "Auto scaling",
-        path: "#auto-scaling",
+        title: "Manager",
+        path: "#manager",
       },
     ],
   },
