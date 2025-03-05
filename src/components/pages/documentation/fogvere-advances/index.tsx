@@ -1,5 +1,4 @@
 import AutoScaling from "./auto-scaling";
-import Logging from "./logging";
 
 const FogverseAdvances = () => {
   return (
@@ -8,7 +7,6 @@ const FogverseAdvances = () => {
         More on FogVerse
       </div>
       <div className="text-base">...</div>
-      <Logging />
       <AutoScaling />
     </div>
   );

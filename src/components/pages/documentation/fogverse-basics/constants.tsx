@@ -87,25 +87,33 @@ class MyCameraConsumer(OpenCVConsumer):
         self.consumer.set(cv2.CAP_PROP_FPS, 5)`,
 };
 
-/*
-export const ABSTRACT_CONSUMER = {
-  start_consumer: `async def start_consumer(self):
-    pass`,
+export const PROFILING = {
+  initialization: `from fogverse import Producer
+from fogverse.profiling import Profiling
 
-  receive_error: `def receive_error(self, *args, **kwargs):
-    pass`,
+class MyProducer(Producer):
+	def __init__(self):
+		self.producer_topic = ''            # message topic
+		self.producer_servers = ['']        # kafka servers
+		Producer.__init__(self)
+		Profiling.__init__(self, name='', dirname='')`,
+
+  example: `import numpy as np
+import asyncio
+import datetime
+
+from dotenv import load_dotenv
+from fogverse import Producer
+from fogverse.profiling import Profiling
+from pathlib import Path
+
+CSV_DIR = Path('logs') / datetime.datetime.today().strftime('%Y%m%d%H%M%S')
+
+load_dotenv()
+class MyProducer(Producer, Profiling):
+	def __init__(self, loop=None):
+		self.producer_topic = 'input'
+		profiling_name = f'{self.__class__.__name__}'
+		Producer.__init__(self, loop=loop)
+    	Profiling.__init__(self, name=profiling_name, dirname=CSV_DIR)`,
 };
-
-export const ABSTRACT_PRODUCER = {
-  start_producer: `async def start_producer(self):
-    logger = getattr(self, '_log', None)
-    if isinstance(logger, FogVerseLogging):
-        logger.std_log('Config: %s', self._producer_conf)
-        if getattr(self, 'producer_topic', None) is not None:
-            logger.std_log('Topic: %s', self.producer_topic)
-    await self.producer.start()`,
-
-  receive_error: `def receive_error(self, *args, **kwargs):
-      pass`,
-};
-*/

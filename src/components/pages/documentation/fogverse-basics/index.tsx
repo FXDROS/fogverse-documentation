@@ -2,6 +2,7 @@ import Consumer from "./consumer";
 import OpenCV from "./opencv";
 import Producer from "./producer";
 import ConsumerStorage from "./consumer-storage";
+import Profiling from "./profiling";
 
 const FogverseBasics = () => {
   return (
@@ -20,6 +21,7 @@ const FogverseBasics = () => {
       <Consumer />
       <ConsumerStorage />
       <OpenCV />
+      <Profiling />
     </div>
   );
 };

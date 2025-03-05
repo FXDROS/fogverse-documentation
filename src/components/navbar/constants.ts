@@ -56,16 +56,16 @@ export const DOCUMENTATION = [
         title: "OpenCV consumer",
         path: "#opencv-consumer",
       },
+      {
+        title: "Profiling",
+        path: "#profiling",
+      },
     ],
   },
   {
     topic: "FogVerse advances",
     path: "#fogverse-advances",
     content: [
-      {
-        title: "Logging",
-        path: "#logging",
-      },
       {
         title: "Auto scaling",
         path: "#auto-scaling",
